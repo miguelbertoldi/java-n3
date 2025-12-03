@@ -10,6 +10,8 @@ import br.edu.catolicasc.to_do.repository.TaskRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 @AllArgsConstructor
@@ -57,6 +59,10 @@ public class TaskService {
                 finishedTasks,
                 finishedTasksPercent
         );
+    }
+
+    public List<Task> findAll() {
+        return taskRepository.findAll();
     }
 
 }
